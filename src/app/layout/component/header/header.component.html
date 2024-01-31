@@ -1,0 +1,87 @@
+<!-- bucle for -->
+<!-- <div appRounded>Diectiva</div>
+<ul appRounded>
+    <li *ngFor="let nav of menu">
+        {{nav}}
+    </li>
+
+    <div *ngIf="!menu.length">El array esta vacio</div>
+</ul> -->
+
+<!-- for ang17 -->
+<!-- <ul appRounded>
+    @for (nav of menu; track $index) {
+        <li>
+            {{$index}}-{{nav}}
+        </li>
+    }@empty {
+        <h3>El array esta vacío</h3>
+    }
+</ul> -->
+
+<!-- condicional if -->
+<!-- <div *ngIf="loading; else listaMenu">Cargando menú..</div>
+<ng-template #listaMenu>
+    <ul appRounded>
+        <li *ngFor="let nav of menu">
+            {{nav}}
+        </li>
+    </ul>
+</ng-template> -->
+
+<!-- if ang17 -->
+<!-- @if(loading){
+    <div>cargando menú...   </div>   
+}@else{
+    <ul appRounded>
+        <li *ngFor="let nav of menu">
+            {{nav}}
+        </li>
+    </ul>
+} -->
+
+<!-- switch -->
+
+<!-- <div [ngSwitch]="status">
+    <div *ngSwitchCase="'aprobado'">El alumno esta aprobado</div>
+    <div *ngSwitchCase="'regular'">El alumno regularizó</div>
+    <div *ngSwitchCase="'recursado'">El alumno desaprobó</div>
+    <div *ngSwitchDefault> No tiene notas</div>
+</div> -->
+
+<!-- switch ang17 -->
+
+<!-- @switch (status) {
+    @case ('aprobado') {
+        <p>EL alumno aprobó</p>
+    }
+    @case ('regular') {
+        <p>El alumno regularizó</p>
+    }
+    @default {
+        <p>No se tienen notas del alumno</p>
+    }
+} -->
+
+<!-- eventos -->
+
+<!-- <div>
+    <button (click)="mostrarMenu()" >Cargar menú</button>
+    <div *ngIf="cargaMenu;">
+        <li appRounded *ngFor="let nav of menu">
+            {{nav}}
+        </li>
+    </div>
+</div> -->
+
+<!-- two way binding -->
+<!-- <div>
+    <input type="text" [placeholder]="'Nombre'" [(ngModel)]="nombre">
+    <input type="text" [placeholder]="'Apellido'" [(ngModel)]="apellido">
+    <h3>{{nombre}} {{apellido}}</h3>
+    <p [ngClass]="'lista'"> Lista</p>
+</div> -->
+
+<!-- Pipes -->
+<h2>cumpleaños</h2>
+<p>La fecha es {{birthday | date: 'short' }}</p>
